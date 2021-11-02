@@ -1,18 +1,20 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Blog App - Rails Project
 
-> One paragraph statement about the project.
+> This is a Rails initial project.
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
+This project is meant to be a full blog app and it's goal is to teach students about how the whole structure of Ruby on Rails work.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Ruby
+- Ruby on Rails
+- Git & Github
+- Gems
+- VScode
 
 ## Live Demo
 
