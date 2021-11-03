@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "Posts", type: :request do
-  describe "GET /index" do
+RSpec.describe 'Posts', type: :request do
+  describe 'GET /index' do
     before(:example) { get '/users/1/posts' }
 
     it 'is a success' do
