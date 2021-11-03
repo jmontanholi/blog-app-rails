@@ -16,47 +16,35 @@ This project is meant to be a full blog app and it's goal is to teach students a
 - Gems
 - VScode
 
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
-
-
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+- Command line or GitHub Desktop
+- Ruby installed
+- Rails and dependencies installed
 ### Setup
 
-### Install
-
-### Usage
-
+- Go to the  directory in your computer that you want to copy this project
+- Use the following code to copy the project files:
+`git clone https://github.com/jmontanholi/blog-app-rails.git`
+- CD into the cloned directory
+- Run `bundle install`
+- Run `rails s`
 ### Run tests
 
-### Deployment
-
+- To run the tests simply run `bundle exec rspec`
 
 
 ## Authors
 
-👤 **Author1**
+👤 **João Vítor Montanholi Nunes**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
+- GitHub: [jmontanholi](https://github.com/jmontanholi)
+- Twitter: [MontanholiNunes](https://twitter.com/MontanholiNunes)
+- LinkedIn: [Joao vitor montanholi](https://www.linkedin.com/in/joaovitormontanholi/)
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
@@ -66,12 +54,6 @@ Feel free to check the [issues page](../../issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 
