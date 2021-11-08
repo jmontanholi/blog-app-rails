@@ -2,14 +2,15 @@ class Post < ApplicationRecord
   has_many :comments
   has_many :likes
   belongs_to :user
-
-  def update_counter(id)
-    user = User.find_by(id: id)
-    user.posts_counter += 1
-    user.save
+  after_save :update_counter
+ 
+  def show_recent(id)
+    comments.order(created_at: :desc).limit(5)
   end
 
-  def show_recent(id)
-    Comment.where('post_id = ?', id).limit(5).order(created_at: :desc)
+  private
+
+  def update_counter
+    user.increment!(:posts_counter)
   end
 end
