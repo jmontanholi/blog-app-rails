@@ -10,6 +10,6 @@ class Post < ApplicationRecord
   end
 
   def show_recent(id)
-    Comment.where("post_id = ?", id).limit(5).order(created_at: :desc)
+    Comment.where('post_id = ?', id).limit(5).order(created_at: :desc)
   end
 end

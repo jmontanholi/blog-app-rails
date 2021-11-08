@@ -4,6 +4,6 @@ class User < ApplicationRecord
   has_many :likes
 
   def show_recent(id)
-    Post.where("user_id = ?", id).limit(3).order(created_at: :desc)
+    Post.where('user_id = ?', id).limit(3).order(created_at: :desc)
   end
 end
