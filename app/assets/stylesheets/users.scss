@@ -52,3 +52,18 @@ ul {
     }
   }
 }
+
+.profile_bio {
+  display: flex;
+  flex-direction: column;
+  width: 40rem;
+  border-radius: 10px;
+  border: 1px solid black;
+  margin-bottom: 2rem;
+  h3 {
+    margin: 1rem 0 0 1rem;
+  }
+  p {
+    align-self: center;
+  }
+}

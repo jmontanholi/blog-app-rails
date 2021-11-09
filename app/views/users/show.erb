@@ -1,3 +1,22 @@
-<h1>
-  This is a User profile
-</h1>
+<div class="user_index_main_div">
+  <%= render @user %>
+  <div class="profile_bio">
+    <h3>Bio</h3>
+    <p><%= @user.bio %></p>
+  </div>
+  <div>
+    <ul>
+      <% @posts.each do |post| %>
+        <li class="post_index_li">
+          <h3>Title: <%= post.title %></h3>
+          <p><%= post.text %> aaaaaaa</p>
+          <div class="post_index_li_counters">
+            <p class="post_index_li_comments">Comments: <span><%= post.comments_counter %></span></p>  
+            <p class="post_index_li_likes">Likes: <span><%= post.likes_counter %></span></p>
+          </div>
+        </li>
+      <%end%>
+    </ul>
+  </div>
+  <%= link_to 'See all posts', "/users/#{@user.id}/posts" %>
+</div>
