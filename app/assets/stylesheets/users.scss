@@ -38,15 +38,18 @@ ul {
   border: 1px solid black;
   padding: 1rem;
   border-radius: 10px;
+
   h3 {
     font-size: 2rem;
     padding: 0;
     margin: 0;
   }
+
   p {
     align-self: flex-end;
     padding: 0;
     margin: 0;
+
     span {
       font-weight: bold;
     }
@@ -60,9 +63,11 @@ ul {
   border-radius: 10px;
   border: 1px solid black;
   margin-bottom: 2rem;
+
   h3 {
     margin: 1rem 0 0 1rem;
   }
+
   p {
     align-self: center;
   }
