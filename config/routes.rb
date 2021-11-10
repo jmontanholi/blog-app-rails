@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'like/create'
-  get 'like/destroy'
-  get 'like/already_like?'
   root 'users#index'
 
   get 'sessions/new', to: 'sessions#new'
@@ -17,5 +14,6 @@ Rails.application.routes.draw do
   post '/posts/new', to: 'posts#create'
   get '/users/:user/posts', to: 'posts#index'
   get '/users/:user/posts/:id', to: 'posts#show'
+  post '/users/:user/posts/:id/create_like', to: 'likes#create'
   post '/users/:user/posts/:id', to: 'comments#create'
 end

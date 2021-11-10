@@ -6,6 +6,7 @@
       <p class="post_index_li_comments">Comments: <span><%= @post.comments_counter %></span></p>  
       <p class="post_index_li_likes">Likes: <span><%= @post.likes_counter %></span></p>
     </div>
+    <%= button_to 'Like', "/users/#{params[:user]}/posts/#{params[:id]}/create_like", method: :post %>
   </div>
   <div>
     <ul>
