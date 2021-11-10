@@ -11,9 +11,7 @@ class PostsController < ApplicationController
   end
 
   def new
-    unless session[:user_id]
-      redirect_to '/sessions/new'
-    end
+    redirect_to '/sessions/new' unless session[:user_id]
   end
 
   def create
@@ -25,9 +23,9 @@ class PostsController < ApplicationController
       user_id: session[:user_id]
     )
 
-    if post.save
-      flash[:notice] = 'Post successfully created'
-      redirect_to "/users/#{session[:user_id]}/posts"
-    end
+    return unless post.save
+
+    flash[:notice] = 'Post successfully created'
+    redirect_to "/users/#{session[:user_id]}/posts"
   end
 end

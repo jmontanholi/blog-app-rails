@@ -6,9 +6,9 @@ class CommentsController < ApplicationController
       post_id: params[:id]
     )
 
-    if comment.save
-      flash.now[:notice] = 'Comment successfully saved'
-      redirect_back(fallback_location: root_path)
-    end
+    return unless comment.save
+
+    flash.now[:notice] = 'Comment successfully saved'
+    redirect_back(fallback_location: root_path)
   end
 end

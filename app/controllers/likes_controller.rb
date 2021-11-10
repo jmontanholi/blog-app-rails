@@ -3,7 +3,7 @@ class LikesController < ApplicationController
     @post = Post.find_by(id: params[:id])
     if already_liked?
       flash[:alert] = 'Already liked'
-    else 
+    else
       @post.likes.create(user_id: session[:user_id])
     end
     redirect_back(fallback_location: root_path)
