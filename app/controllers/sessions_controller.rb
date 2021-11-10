@@ -4,7 +4,6 @@ class SessionsController < ApplicationController
   def create
     @user = User.find_by(name: params[:name])
     session[:user_id] = @user.id
-    p session[:user_id]
     flash[:notice] = 'Successfully logged in'
     redirect_to '/users'
   end
