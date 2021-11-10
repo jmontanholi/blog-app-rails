@@ -4,8 +4,6 @@
 
 > This is a Rails initial project.
 
-![screenshot](./app_screenshot.png)
-
 This project is meant to be a full blog app and it's goal is to teach students about how the whole structure of Ruby on Rails work.
 
 ## Built With
