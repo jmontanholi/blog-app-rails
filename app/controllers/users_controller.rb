@@ -21,6 +21,7 @@ class UsersController < ApplicationController
     if user.save
       p 'Working'
       flash[:notice] = 'User was successfully created'
+      session[:user_id] = user.id
       redirect_to users_path
     end
   end
