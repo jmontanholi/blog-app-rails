@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before(:each) do
-    @user = User.new(id: 2, name:'Pedrinho', photo:'none', bio:'something on the bio', posts_counter:0)
+    @user = User.new(id: 1, name:'Pedrinho', photo:'none', bio:'something on the bio', posts_counter:0)
   end
 
   it 'Validates name presence' do
@@ -39,7 +39,7 @@ RSpec.describe User, type: :model do
     @user.save
     x = 0
     until x == 3 do
-      User.find_by(id: 2).posts.create(
+      User.find_by(id: 1).posts.create(
         title: "This is the #{x} post",
         text: "This is the #{x} post text",
         comments_counter: 0,
