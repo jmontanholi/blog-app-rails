@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Post, type: :model do
   before(:each) do
-    User.create(id: 1, name:'Peter', photo:'none', bio:'something on the bio', posts_counter:0)
-    @post = Post.new(id: 1, title:'some title', text:'some text', comments_counter: 0, likes_counter: 0, user_id: 1)
+    User.create(id: 1, name: 'Peter', photo: 'none', bio: 'something on the bio', posts_counter: 0)
+    @post = Post.new(id: 1, title: 'some title', text: 'some text', comments_counter: 0, likes_counter: 0, user_id: 1)
   end
 
   it 'Validates title' do
@@ -31,10 +31,10 @@ RSpec.describe Post, type: :model do
     expect(@post).not_to be_valid
   end
 
-  it 'Gets a post last 5 comments' do 
+  it 'Gets a post last 5 comments' do
     @post.save
     x = 0
-    until x == 5 do
+    until x == 5
       Post.find_by(id: 1).comments.create(
         text: "This is the #{x} post comment",
         user_id: 1
@@ -43,7 +43,7 @@ RSpec.describe Post, type: :model do
     end
     array = []
 
-    @post.show_recent.each {|comment| array.push(comment)}
+    @post.show_recent.each { |comment| array.push(comment) }
 
     expect(array.length).to be 5
   end

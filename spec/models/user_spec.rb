@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before(:each) do
-    @user = User.new(id: 1, name:'Pedrinho', photo:'none', bio:'something on the bio', posts_counter:0)
+    @user = User.new(id: 1, name: 'Pedrinho', photo: 'none', bio: 'something on the bio', posts_counter: 0)
   end
 
   it 'Validates name presence' do
@@ -38,7 +38,7 @@ RSpec.describe User, type: :model do
   it 'Returns the last three posts for that user' do
     @user.save
     x = 0
-    until x == 3 do
+    until x == 3
       User.find_by(id: 1).posts.create(
         title: "This is the #{x} post",
         text: "This is the #{x} post text",
@@ -49,7 +49,7 @@ RSpec.describe User, type: :model do
     end
 
     array = []
-    @user.show_recent.each {|post| array.push(post)}
+    @user.show_recent.each { |post| array.push(post) }
 
     expect(array.length).to be 3
   end
