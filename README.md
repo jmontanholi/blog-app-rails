@@ -33,7 +33,7 @@ To get a local copy up and running follow these simple example steps.
 - Run `rails s`
 ### Run tests
 
-- To run the tests simply run `bundle exec rspec`
+- To run the tests simply run `bundle exec rspec` or `rails spec`
 
 
 ## Authors
