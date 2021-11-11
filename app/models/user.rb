@@ -2,6 +2,7 @@ class User < ApplicationRecord
   validates :name, uniqueness: true
   validates :name, :photo, presence: true
   validates :name, :photo, :bio, length: { minimum: 5 }
+  validates :posts_counter, numericality: { greater_than_or_equal_to: 0 }
   has_many :comments
   has_many :posts
   has_many :likes
